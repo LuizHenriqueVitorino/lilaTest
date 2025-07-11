@@ -9,12 +9,15 @@ Library    Screenshot
 CT01 - Login com sucesso
     Informar o Usuário
     Informar a Senha
+    Verificar se o botão está habilitado
     Clicar no botão entrar  
+    Verificar mensagem de confirmação de login
+    Verificar todas as opções do menu
 
 CT02 - Login sem informar o Usuário
     Informar a Senha
-    Clicar no botão entrar
+    Verificar se o botão está desabilitado
 
 CT03 - Login sem informar a Senha
     Informar o Usuário
-    Clicar no botão entrar
+    Verificar se o botão está desabilitado

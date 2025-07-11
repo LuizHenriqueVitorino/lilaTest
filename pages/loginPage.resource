@@ -16,4 +16,8 @@ Realize o login
     Escreva no Input    ${passwordInput}    ${password}
     Clique no botão     ${loginButton}
 
-    
+Verificar se o botão está desabilitado
+    Verificar se o elemento está desabilitado    locator=${loginButton}
+
+Verificar se o botão está habilitado
+    Verificar se o elemento está habilitado    locator=${loginButton}

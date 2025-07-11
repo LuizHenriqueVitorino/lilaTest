@@ -1,0 +1,9 @@
+*** Variables ***
+${loginMessage}         //div[.='Você está logado(a)!']
+${requestsButton}       //div[.='Pedidos']
+${productsButton}       //div[.='Produtos']
+${stockButton}          //div[.='Estoque']
+${cashFlowButton}       //div[.='Fluxo de caixa']
+${custumerButton}       //div[.='Clientes']
+${userButton}           //div[.='Usuários']
+${ingredientsButton}    //div[.='Ingredientes']
