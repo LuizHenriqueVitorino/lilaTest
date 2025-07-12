@@ -4,26 +4,26 @@ Library     FakerLibrary
 
 *** Keywords ***
 Informar o Usuário
-    Escreva no Input    ${userInput}    ${user}
+    Escrever no Input    ${userInput}    ${user}
 
 Informar a Senha
-    Escreva no Input    ${passwordInput}    ${password}
+    Escrever no Input    ${passwordInput}    ${password}
 
 Informar Senha incorreta
     ${radomPassword}    FakerLibrary.Text    max_nb_chars=${8}
-    Escreva no Input    ${passwordInput}    ${radomPassword}
+    Escrever no Input    ${passwordInput}    ${radomPassword}
 
 Informar Usuário inválido
     ${radomUser}    FakerLibrary.First Name    
-    Escreva no Input    ${userInput}    ${radomUser}
+    Escrever no Input    ${userInput}    ${radomUser}
 
 Clicar no botão entrar
-    Clique no botão     ${loginButton}
+    Clicar no botão     ${loginButton}
 
-Realize o login
-    Escreva no Input    ${userInput}    ${user}
-    Escreva no Input    ${passwordInput}    ${password}
-    Clique no botão     ${loginButton}
+Realizar o login
+    Informar o Usuário
+    Informar a Senha
+    Clicar no botão entrar
 
 
 ##========== Verificações ==========##

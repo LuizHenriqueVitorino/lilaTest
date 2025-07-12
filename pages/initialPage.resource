@@ -2,7 +2,29 @@
 Resource    ../resource/comom.resource
 
 *** Keywords ***
+Clicar na opção de Pedidos
+    Clicar na opção    ${requestsButton}
 
+Clicar na opção de Produtos
+    Clicar na opção    ${productsButton}
+
+Clicar na opção de Estoque
+    Clicar na opção    ${stockButton}
+
+Clicar na opção de Fluxo de caixa
+    Clicar na opção    ${cashFlowButton}
+
+Clicar na opção de Clientes
+    Clicar na opção    ${custumerButton}
+
+Clicar na opção de Usuários
+    Clicar na opção    ${userButton}
+
+Clicar na opção de Ingredientes
+    Clicar na opção    ${ingredientsButton}
+
+Clicar em sair
+    Clicar no botão    ${exitButton}
 
 
 ## Verificaçãoes

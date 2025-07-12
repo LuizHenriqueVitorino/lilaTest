@@ -1,4 +1,5 @@
 *** Settings ***
 Resource    config.resource
 Resource    login.resource
-Resource    initialPage.resource
+Resource    initial.resource
+Resource    requests.resource
