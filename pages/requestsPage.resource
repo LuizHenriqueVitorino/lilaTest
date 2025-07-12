@@ -23,9 +23,20 @@ Clicar no status ${statusName}
 Clicar em selecionar Forma de Pagamento
     Clicar na opção    ${paymentMethodSelector}
 
+Clicar no botão de adicionar Produto
+    Clicar no botão    ${addProductButton}
+
+Clicar em selecionar o Produto
+    Clicar na opção    ${productSelector}
+
+Clicar no Produto ${productName}
+    Set Local Variable     ${productXpath}    //div[@role='option'][.='${productName}']
+    Clicar na opção        ${productXpath}
+
 Clicar na Forma de Pagamento ${paymentMethod}
     Set Local Variable     ${paymentMethodXpath}    //div[.='${paymentMethod}']
     Clicar na opção        ${paymentMethodXpath}
+
 
 ## ============== Seleção de elementos básicos ============== ##
 Selecionar o Cliente ${custumerName}
@@ -39,4 +50,17 @@ Selecionar o status do Pedido como ${statusName}
 Selecionar a Forma de Pagamento como ${paymentMethod}
     Clicar em selecionar Forma de Pagamento
     Clicar na Forma de Pagamento ${paymentMethod}
-    
+
+Selecionar o Produto ${productName}
+    Clicar no botão de adicionar Produto
+    Clicar em selecionar o Produto
+    Clicar no Produto ${productName}
+
+## ============== Preenchimento de campos básicos ============== ##
+Inserir o valor R$${totalOrderValue} no total do Pedido
+    Escrever no Input    ${totalValueInput}    ${totalOrderValue}
+
+Inserir o valor R$${amountPaid} no valor Pago
+    Escrever no Input    ${amountPaidInput}    ${amountPaid}
+
+## ============== Verificações de elementos básicos ============== ##

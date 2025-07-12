@@ -14,9 +14,10 @@ ${custumerSelector}          //div[@id='q-portal--dialog--1']//div[.='Cliente']
 ${addCustumerButton}         //div[.='Cliente']/../../../..//button[.='add']
 ${orderStatusSelector}       //div[.='Status do Pedido']/..
 ${paymentMethodSelector}     //div[.='Forma de Pagamento']/..
-${totalValueInput}           //div[.='Valor Total']/..
-${amountPaidInput}           //div[.='Valor Pago']/..
+${totalValueInput}           //div[.='Valor Total']/../input
+${amountPaidInput}           //div[.='Valor Pago']/../input
 ${addProductButton}          //div[@id='q-portal--dialog--1']//div[.='Produtos']/../button
+${productSelector}           //div[.='Produtos']/../..//input[@type='search'][@value='']
 ${deliveryDateSelector}      //div[.='Data de Entrega']//input
 ${deliveryTimeInput}         //div[.='Hora de Entrega']//input
 ${orderDetailsInput}         //div[.='Detalhes']//input
