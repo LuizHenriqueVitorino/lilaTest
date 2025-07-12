@@ -25,7 +25,8 @@ Realize o login
     Escreva no Input    ${passwordInput}    ${password}
     Clique no botão     ${loginButton}
 
-## Verificações
+
+##========== Verificações ==========##
 Verificar mensagem de erro de login com senha incorreta
     Localizar um Texto    ${errorLoginMessage}
     Verificar Texto    ${errorLoginMessage}    Senha inválida.    ${localizedText}
