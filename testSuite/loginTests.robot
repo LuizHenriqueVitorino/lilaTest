@@ -21,3 +21,18 @@ CT02 - Login sem informar o Usuário
 CT03 - Login sem informar a Senha
     Informar o Usuário
     Verificar se o botão está desabilitado
+
+CT04 - Login com Senha incorreta
+    Informar o Usuário
+    Informar Senha incorreta
+    Verificar se o botão está habilitado
+    Clicar no botão entrar  
+    Verificar mensagem de erro de login com senha incorreta
+
+CT05 - Login com Usuário inválido
+    Informar Usuário inválido
+    Informar a Senha
+    Verificar se o botão está habilitado
+    Clicar no botão entrar
+    Verificar mensagem de erro de login com usuário inválido
+
