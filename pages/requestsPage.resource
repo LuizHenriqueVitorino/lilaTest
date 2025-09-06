@@ -1,66 +1,27 @@
-*** Settings ***
-Resource    ../resource/comom.resource
+*** Variables ***
+${addRequestButton}     //button[.='add']
+${dateRequestButton}    //button/span/i[.='event']/../..
+${deliverSelector}      //div[.='Entregues']
+${statusSelector}       //div[.='Status']
+${AllStatus}            //div[@role='option']//div[.='Todos']
+${pendingStatus}        //div[@role='option']//div[.='Pendente']
+${confirmedStatus}      //div[@role='option']//div[.='Confirmado']
+${finishedStatus}       //div[@role='option']//div[.='Finalizado']
+${deliveredStatus}      //div[@role='option']//div[.='Entregue']
 
-*** Keywords ***
-## ============== Cliques em elementos básicos ============== ##
-Clicar no botão de novo Pedido
-    Clicar no botão    ${addRequestButton}
-
-Clicar em selecionar o Cliente
-    Clicar na opção    ${custumerSelector}
-
-Clicar no Cliente ${custumerName}
-    Set Local Variable     ${custumerXpath}    //div[@role='listbox']//div[.='${custumerName}']
-    Clicar na opção        ${custumerXpath}
-
-Clicar em selecionar status do Pedido
-    Clicar na opção    ${orderStatusSelector}
-
-Clicar no status ${statusName}
-    Set Local Variable     ${statusXpath}    //div[@role='option']/div[.='${statusName}']
-    Clicar na opção        ${statusXpath}
-
-Clicar em selecionar Forma de Pagamento
-    Clicar na opção    ${paymentMethodSelector}
-
-Clicar no botão de adicionar Produto
-    Clicar no botão    ${addProductButton}
-
-Clicar em selecionar o Produto
-    Clicar na opção    ${productSelector}
-
-Clicar no Produto ${productName}
-    Set Local Variable     ${productXpath}    //div[@role='option'][.='${productName}']
-    Clicar na opção        ${productXpath}
-
-Clicar na Forma de Pagamento ${paymentMethod}
-    Set Local Variable     ${paymentMethodXpath}    //div[.='${paymentMethod}']
-    Clicar na opção        ${paymentMethodXpath}
-
-
-## ============== Seleção de elementos básicos ============== ##
-Selecionar o Cliente ${custumerName}
-    Clicar em selecionar o Cliente
-    Clicar no Cliente ${custumerName}
-
-Selecionar o status do Pedido como ${statusName}
-    Clicar em selecionar status do Pedido
-    Clicar no status ${statusName}
-
-Selecionar a Forma de Pagamento como ${paymentMethod}
-    Clicar em selecionar Forma de Pagamento
-    Clicar na Forma de Pagamento ${paymentMethod}
-
-Selecionar o Produto ${productName}
-    Clicar no botão de adicionar Produto
-    Clicar em selecionar o Produto
-    Clicar no Produto ${productName}
-
-## ============== Preenchimento de campos básicos ============== ##
-Inserir o valor R$${totalOrderValue} no total do Pedido
-    Escrever no Input    ${totalValueInput}    ${totalOrderValue}
-
-Inserir o valor R$${amountPaid} no valor Pago
-    Escrever no Input    ${amountPaidInput}    ${amountPaid}
-
-## ============== Verificações de elementos básicos ============== ##
+##=========== CAIXA DE DIÁLOGO DE NOVO PEDIDO ===========##
+${custumerSelector}          //div[@id='q-portal--dialog--1']//div[.='Cliente']
+${addCustumerButton}         //div[.='Cliente']/../../../..//button[.='add']
+${orderStatusSelector}       //div[.='Status do Pedido']/..
+${paymentMethodSelector}     //div[.='Forma de Pagamento']/..
+${totalValueInput}           //div[.='Valor Total']/../input
+${amountPaidInput}           //div[.='Valor Pago']/../input
+${addProductButton}          //div[@id='q-portal--dialog--1']//div[.='Produtos']/../button
+${productSelector}           //div[.='Produtos']/../..//input[@type='search'][@value='']
+${deliveryDateSelector}      //div[.='Data de Entrega']//input
+${deliveryTimeInput}         //div[.='Hora de Entrega']//input
+${orderDetailsInput}         //div[.='Detalhes']//input
+${orderObserationTextarea}   //div[.='Observações']//textarea
+${addImageButton}            //div/a[.='add_box']
+${cancelButton}              //button[.='Cancelar']
+${saveButton}                //button[.='Salvar']

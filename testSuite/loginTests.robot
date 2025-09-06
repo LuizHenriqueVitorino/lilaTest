@@ -1,5 +1,5 @@
 *** Settings ***
-Resource    ../pages/mainPages.resource
+Resource    ../steps/mainSteps.resource
 Resource    ../resource/setups.resource
 Test Setup   Abrir o navegador
 Test Teardown    Fechar o navegador

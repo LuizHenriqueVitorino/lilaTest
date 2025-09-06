@@ -1,6 +1,7 @@
 *** Settings ***
 Library    SeleniumLibrary
-Resource    ../variables/mainVariables.resource
+Resource    ../pages/mainPage.resource
+Resource    configVariables.resource
 
 *** Keywords ***
 Escrever no Input
